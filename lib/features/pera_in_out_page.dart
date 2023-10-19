@@ -6,118 +6,148 @@ class PeraInOutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+
     return Scaffold(
-        body: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text.rich(
-              TextSpan(
-                children: [
-                  TextSpan(text: 'Pera', style: titlePera),
-                  TextSpan(
-                    text: 'Plan',
-                    style: titlePlan,
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-        SizedBox(height: large),
-        Text('Pera In', style: pIn),
-        Row(
-          children: [
-            Flexible(
-              child: Column(
+        backgroundColor: white,
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              SizedBox(height: xlarge),
+              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                      color: lgray,
-                      borderRadius: BorderRadius.circular(12),
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(text: 'Pera', style: titlePera),
+                        TextSpan(
+                          text: 'Plan',
+                          style: titlePlan,
+                        ),
+                      ],
                     ),
-                  ),
-                  TextFormField(
-                    keyboardType:
-                        const TextInputType.numberWithOptions(decimal: true),
-                    textAlign: TextAlign.left,
-                    cursorColor: green,
-                    style: inpAmt,
-                    decoration: InputDecoration(
-                      hintText: 'Enter Amount...',
-                      hintStyle: hintAmt,
-                      border: InputBorder.none,
-                      filled: true,
-                      fillColor: lgray,
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Submit Input 1
-                    },
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.green),
-                    ),
-                    child: Text('Pera In', style: button),
                   ),
                 ],
               ),
-            )
-          ],
-        ),
-        SizedBox(height: medium),
-        Text('Pera Out', style: pOut),
-        Row(
-          children: [
-            Flexible(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                      color: lgray,
-                      borderRadius: BorderRadius.circular(12),
+              SizedBox(height: xlarge),
+              Container(
+                padding: const EdgeInsets.all(20.0),
+                width: width * .9,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    color: white,
+                    boxShadow: [
+                      BoxShadow(
+                          color: dgray,
+                          blurRadius: 5,
+                          spreadRadius: 1,
+                          offset: const Offset(2, 2)),
+                    ]),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Pera In', style: pIn),
+                    Row(
+                      children: [
+                        Flexible(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                decoration: BoxDecoration(
+                                  color: lgray,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                              TextFormField(
+                                keyboardType:
+                                    const TextInputType.numberWithOptions(
+                                        decimal: true),
+                                textAlign: TextAlign.left,
+                                cursorColor: green,
+                                style: inpAmt,
+                                decoration: InputDecoration(
+                                  hintText: 'Enter Amount...',
+                                  hintStyle: hintAmt,
+                                  border: InputBorder.none,
+                                  filled: true,
+                                  fillColor: lgray,
+                                ),
+                              ),
+                              ElevatedButton(
+                                onPressed: () {
+                                  // Submit Input 1
+                                },
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all<Color>(
+                                          Colors.green),
+                                ),
+                                child: Text('Pera In', style: button),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
-                  ),
-                  TextFormField(
-                    keyboardType:
-                        const TextInputType.numberWithOptions(decimal: true),
-                    textAlign: TextAlign.left,
-                    cursorColor: red,
-                    style: outAmt,
-                    decoration: InputDecoration(
-                      hintText: 'Enter Amount...',
-                      hintStyle: hintAmt,
-                      border: InputBorder.none,
-                      filled: true,
-                      fillColor: lgray,
+                    SizedBox(height: medium),
+                    Text('Pera Out', style: pOut),
+                    Row(
+                      children: [
+                        Flexible(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                decoration: BoxDecoration(
+                                  color: lgray,
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                              ),
+                              TextFormField(
+                                keyboardType:
+                                    const TextInputType.numberWithOptions(
+                                        decimal: true),
+                                textAlign: TextAlign.left,
+                                cursorColor: red,
+                                style: outAmt,
+                                decoration: InputDecoration(
+                                  hintText: 'Enter Amount...',
+                                  hintStyle: hintAmt,
+                                  border: InputBorder.none,
+                                  filled: true,
+                                  fillColor: lgray,
+                                ),
+                              ),
+                              ElevatedButton(
+                                onPressed: () {
+                                  // Submit Input 1
+                                },
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all<Color>(
+                                          Colors.red),
+                                ),
+                                child: Text('Pera Out', style: button),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
                     ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {
-                      // Submit Input 1
-                    },
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.red),
-                    ),
-                    child: Text('Pera Out', style: button),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            )
-          ],
-        ),
-      ],
-    ));
+            ],
+          ),
+        ));
   }
 }
 
@@ -125,8 +155,10 @@ class PeraInOutPage extends StatelessWidget {
 var hlblue = const Color(0xFF0CC0DF);
 var text = const Color(0xFF0FA3B1);
 var icon = const Color(0xFFB8BCCB);
+var white = Color.fromARGB(255, 255, 255, 255);
 var gray = const Color(0xFFE3E3E3);
 var dgray = const Color(0x65000000);
+var mgray = Color.fromARGB(0, 227, 220, 220);
 var lgray = const Color(0x35E3DCDC);
 var green = const Color(0xFF0FB13C);
 var red = const Color(0xFFB1360F);
@@ -137,9 +169,9 @@ TextStyle titlePera = GoogleFonts.lexend(
 TextStyle titlePlan =
     GoogleFonts.lexend(fontSize: 64, fontWeight: FontWeight.w700, color: text);
 TextStyle inpAmt =
-    GoogleFonts.lexend(fontSize: 32, fontWeight: FontWeight.w700, color: text);
+    GoogleFonts.lexend(fontSize: 24, fontWeight: FontWeight.w700, color: text);
 TextStyle outAmt =
-    GoogleFonts.lexend(fontSize: 32, fontWeight: FontWeight.w700, color: text);
+    GoogleFonts.lexend(fontSize: 24, fontWeight: FontWeight.w700, color: text);
 TextStyle pIn =
     GoogleFonts.lexend(fontSize: 20, fontWeight: FontWeight.w700, color: green);
 TextStyle pOut =
@@ -160,6 +192,9 @@ TextStyle button = GoogleFonts.lexend(
     fontSize: 15, fontWeight: FontWeight.w600, color: Colors.white);
 
 // Gaps
+var xxxlarge = 150.0;
+var xxlarge = 100.0;
+var xlarge = 80.0;
 var large = 50.0;
 var medium = 30.0;
 var small = 16.0;
