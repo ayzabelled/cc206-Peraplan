@@ -6,12 +6,14 @@ void main() {
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: TransactionsScreen(),
+      home: SafeArea(
+        child: TransactionsScreen(),
+      ),
     );
   }
 }
