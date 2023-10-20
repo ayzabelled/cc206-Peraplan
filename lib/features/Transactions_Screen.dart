@@ -35,11 +35,11 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
               ),
             ],
           ),
+          const SizedBox(height: 10),
           Center(
             // Center the buttons
             child: Row(
-              mainAxisAlignment:
-                  MainAxisAlignment.center, // Center the buttons horizontally
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 _buildButton(context, 'All Transactions', tCat, text),
                 _buildButton(context, 'Pera In', tIn, green),
@@ -62,20 +62,21 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
           selectedButton = label;
         });
         if (label == 'All Transactions') {
+          // Show all transaction history
         } else if (label == 'Pera In') {
-          // Handle 'Pera In' button tap
+          // Show only Pera In transaction history
         } else if (label == 'Pera Out') {
-          // Handle 'Pera Out' button tap
+          // Show only Pera Out transaction history
         }
       },
       child: Container(
-        margin: const EdgeInsets.all(10),
+        margin: const EdgeInsets.all(5),
         padding: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           shape: BoxShape.rectangle, // Make the container rectangular
           border:
               isSelected ? Border.all(width: 2.5, color: borderColor) : null,
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(12),
           color: gray, // Background color
         ),
         child: Text(
