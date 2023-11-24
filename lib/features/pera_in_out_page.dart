@@ -463,16 +463,6 @@ var green = const Color(0xFF0FB13C);
 var red = const Color(0xFFB1360F);
 
 // TextStyles
-TextStyle titlePera = TextStyle(
-    fontFamily: 'Batangas',
-    fontSize: 64,
-    fontWeight: FontWeight.w700,
-    color: hlblue);
-TextStyle titlePlan = TextStyle(
-    fontFamily: 'Batangas',
-    fontSize: 64,
-    fontWeight: FontWeight.w700,
-    color: text);
 TextStyle appBar1 = TextStyle(
     fontFamily: 'Batangas',
     fontSize: 20,
@@ -497,32 +487,12 @@ TextStyle drawTxt =
     GoogleFonts.lexend(fontSize: 14, fontWeight: FontWeight.w700, color: black);
 TextStyle txt = GoogleFonts.lexend(
     fontSize: 15, fontWeight: FontWeight.w700, color: hlblue);
-TextStyle drawHead =
-    GoogleFonts.lexend(fontSize: 24, fontWeight: FontWeight.w700, color: white);
-TextStyle header = GoogleFonts.lexend(
-    fontSize: 24, fontWeight: FontWeight.w400, color: hlblue);
 TextStyle boldHeader = GoogleFonts.lexend(
     fontSize: 24, fontWeight: FontWeight.w700, color: hlblue);
 
-TextStyle tIn =
-    GoogleFonts.lexend(fontSize: 15, fontWeight: FontWeight.w600, color: green);
-TextStyle tOut =
-    GoogleFonts.lexend(fontSize: 15, fontWeight: FontWeight.w600, color: red);
-TextStyle tCat =
-    GoogleFonts.lexend(fontSize: 14, fontWeight: FontWeight.w600, color: text);
-TextStyle tagline = GoogleFonts.lexend(
-    fontSize: 12, fontWeight: FontWeight.normal, color: text);
-
-TextStyle button = GoogleFonts.lexend(
-    fontSize: 15, fontWeight: FontWeight.w600, color: Colors.white);
-
 // Gaps
-var xxxlarge = 150.0;
-var xxlarge = 100.0;
-var xlarge = 80.0;
 var large = 50.0;
 var medium = 30.0;
 var small = 16.0;
 var xsmall = 10.0;
 var xxsmall = 5.0;
-var cont = 330.0;
