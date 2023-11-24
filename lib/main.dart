@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:peraplan/features/pera_in_out_page.dart';
+import 'package:peraplan/features/transactions_screen.dart';
 
 void main() {
   runApp(const MainApp());
@@ -8,12 +9,14 @@ void main() {
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  const MainApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: NewTransaction(),
+      home: SafeArea(
+        child: TransactionsScreen(),
+      ),
     );
   }
 }

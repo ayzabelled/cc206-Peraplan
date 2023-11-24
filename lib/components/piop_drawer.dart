@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:peraplan/features/pera_in_out_page.dart';
+import 'package:peraplan/features/Transactions_Screen.dart';
 
 class PIOPDrawer extends StatelessWidget {
   @override
@@ -18,6 +19,7 @@ class PIOPDrawer extends StatelessWidget {
               children: [
                 // Icon in the drawer header
                 Icon(
+                const Icon(
                   Icons.menu_book_outlined,
                   color: Colors.white,
                   size: 64.0,
@@ -57,7 +59,8 @@ class PIOPDrawer extends StatelessWidget {
               // Handle item 2 tap
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TransactionSection()),
+                MaterialPageRoute(
+                    builder: (context) => const TransactionsScreen()),
               );
             },
           ),

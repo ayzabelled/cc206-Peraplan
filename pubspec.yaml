@@ -23,4 +23,5 @@ flutter:
   fonts:
     - family: Batangas
       fonts:
-        - asset: assets/fonts/Batangas Bold 700.otf
+        - asset: assets/fonts/Batangas.ttf
+          weight: 700
