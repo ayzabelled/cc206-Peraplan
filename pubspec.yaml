@@ -20,6 +20,7 @@ flutter:
   uses-material-design: true
 
   fonts:
-  - family: Batangas
-    fonts:
-      - asset: assets/fonts/Batangas Bold 700.otf
+    - family: Batangas
+      fonts:
+        - asset: assets/fonts/Batangas.ttf
+          weight: 700
