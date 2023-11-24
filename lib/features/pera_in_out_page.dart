@@ -122,15 +122,9 @@ class PeraIn extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                              color: white,
-                              boxShadow: [
-                                BoxShadow(
-                                    color: dgray,
-                                    blurRadius: 5,
-                                    spreadRadius: 1,
-                                    offset: const Offset(2, 2)),
-                              ]),
+                            borderRadius: BorderRadius.circular(40),
+                            color: white,
+                          ),
                         ),
                         TextFormField(
                           keyboardType: const TextInputType.numberWithOptions(
@@ -156,15 +150,9 @@ class PeraIn extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: white,
-                              boxShadow: [
-                                BoxShadow(
-                                    color: dgray,
-                                    blurRadius: 5,
-                                    spreadRadius: 1,
-                                    offset: const Offset(2, 2)),
-                              ]),
+                            borderRadius: BorderRadius.circular(20),
+                            color: white,
+                          ),
                         ),
                         TextFormField(
                           keyboardType: const TextInputType.numberWithOptions(
@@ -342,15 +330,9 @@ class PeraOut extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                              color: white,
-                              boxShadow: [
-                                BoxShadow(
-                                    color: dgray,
-                                    blurRadius: 5,
-                                    spreadRadius: 1,
-                                    offset: const Offset(2, 2)),
-                              ]),
+                            borderRadius: BorderRadius.circular(40),
+                            color: white,
+                          ),
                         ),
                         TextFormField(
                           keyboardType: const TextInputType.numberWithOptions(
@@ -376,15 +358,9 @@ class PeraOut extends StatelessWidget {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10),
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              color: white,
-                              boxShadow: [
-                                BoxShadow(
-                                    color: dgray,
-                                    blurRadius: 5,
-                                    spreadRadius: 1,
-                                    offset: const Offset(2, 2)),
-                              ]),
+                            borderRadius: BorderRadius.circular(20),
+                            color: white,
+                          ),
                         ),
                         TextFormField(
                           keyboardType: const TextInputType.numberWithOptions(

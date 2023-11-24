@@ -38,7 +38,10 @@ class PIOPDrawer extends StatelessWidget {
             ),
             onTap: () {
               // Handle item 1 tap
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NewTransaction()),
+              );
             },
           ),
           ListTile(
@@ -52,7 +55,10 @@ class PIOPDrawer extends StatelessWidget {
             ),
             onTap: () {
               // Handle item 2 tap
-              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => TransactionSection()),
+              );
             },
           ),
         ],
