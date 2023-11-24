@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:peraplan/features/pera_in_out_page.dart';
 import 'package:peraplan/features/Transactions_Screen.dart';
 
 class PIOPDrawer extends StatelessWidget {
@@ -17,6 +18,7 @@ class PIOPDrawer extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // Icon in the drawer header
+                Icon(
                 const Icon(
                   Icons.menu_book_outlined,
                   color: Colors.white,
@@ -36,13 +38,13 @@ class PIOPDrawer extends StatelessWidget {
               'New Transaction',
               style: drawTxt,
             ),
-            //  onTap: () {
-            // Handle item 1 tap
-            //  Navigator.push(
-            //      context,
-            //  MaterialPageRoute(builder: (context) => const NewTransaction()),
-            //      );
-            //     },
+            onTap: () {
+              // Handle item 1 tap
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NewTransaction()),
+              );
+            },
           ),
           ListTile(
             leading: Icon(
