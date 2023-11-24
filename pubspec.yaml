@@ -18,3 +18,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  fonts:
+  - family: Batangas
+    fonts:
+      - asset: assets/fonts/Batangas Bold 700.otf
