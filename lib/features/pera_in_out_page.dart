@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:hive/hive.dart';
+import 'package:peraplan/data/database.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:peraplan/components/piop_drawer.dart';
 import 'package:peraplan/components/piop_tabs.dart';
+import 'package:peraplan/features/Transactions_Screen.dart';
 
 class NewTransaction extends StatelessWidget {
   const NewTransaction({super.key});
@@ -33,8 +38,57 @@ class NewTransaction extends StatelessWidget {
   }
 }
 
-class PeraIn extends StatelessWidget {
+class PeraIn extends StatefulWidget {
   const PeraIn({super.key});
+
+  @override
+  State<PeraIn> createState() => _PeraInState();
+}
+
+class _PeraInState extends State<PeraIn> {
+  final _formkey = GlobalKey<FormState>();
+  int value = 0;
+  late Box<Transaction> _transactionBox;
+  final TextEditingController _amountController = TextEditingController();
+  DateTime _selectedDate = DateTime.now();
+  TimeOfDay _selectedTime = TimeOfDay.now();
+  String? _selectedCategory;
+
+  @override
+  void initState() {
+    super.initState();
+    _transactionBox = Hive.box<Transaction>('transactions');
+  }
+
+  // save new Pera In
+  void saveNewPeraIn() {
+    // Parse the amount from the string to double
+    double parsedAmount = double.tryParse(_amountController.text) ?? 0.0;
+    Transaction newTransaction;
+
+/*
+    newTransaction = PeraIn(
+      amount: parsedAmount,
+      date: _selectedDate,
+      time: _selectedTime,
+      category: _selectedCategory,
+    );
+
+    _transactionBox.add(newTransaction);
+    _amountController.clear();
+
+    setState(() {});
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const TransactionsScreen()),
+    );
+*/
+  }
+
+  @override
+  void setState(VoidCallback fn) {
+    super.setState(fn);
+  }
 
   @override
   Widget build(BuildContext context) {
