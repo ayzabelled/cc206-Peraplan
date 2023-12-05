@@ -1,8 +1,8 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, library_private_types_in_public_api
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:peraplan/components/piop_drawer.dart';
+import 'package:peraplan/utils/styles.dart';
 
 class TransactionsScreen extends StatefulWidget {
   const TransactionsScreen({super.key});
@@ -33,7 +33,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
         )),
         iconTheme: IconThemeData(color: hlblue),
       ),
-      drawer: PIOPDrawer(),
+      drawer: const PIOPDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -41,7 +41,7 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text('Transaction History', style: boldHeader),
+                Text('Transaction History', style: headers),
               ],
             ),
             const SizedBox(height: 10),
@@ -100,42 +100,3 @@ class _TransactionsScreenState extends State<TransactionsScreen> {
     );
   }
 }
-
-// Colors
-var hlblue = const Color(0xFF0CC0DF);
-var text = const Color(0xFF0FA3B1);
-var icon = const Color(0xFFB8BCCB);
-var white = const Color.fromARGB(255, 255, 255, 255);
-var gray = const Color(0xFFE3E3E3);
-var dgray = const Color(0x65000000);
-var black = const Color.fromARGB(200, 0, 0, 0);
-var mgray = const Color.fromARGB(0, 227, 220, 220);
-var lgray = const Color(0x35E3DCDC);
-var green = const Color(0xFF0FB13C);
-var red = const Color(0xFFB1360F);
-
-// TextStyles
-TextStyle appBar1 = TextStyle(
-    fontFamily: 'Batangas',
-    fontSize: 20,
-    fontWeight: FontWeight.w700,
-    color: hlblue);
-TextStyle appBar2 = TextStyle(
-    fontFamily: 'Batangas',
-    fontSize: 20,
-    fontWeight: FontWeight.w700,
-    color: text);
-TextStyle header = GoogleFonts.lexend(
-    fontSize: 24, fontWeight: FontWeight.w400, color: hlblue);
-TextStyle boldHeader = GoogleFonts.lexend(
-    fontSize: 24, fontWeight: FontWeight.w700, color: hlblue);
-
-TextStyle tIn =
-    GoogleFonts.lexend(fontSize: 15, fontWeight: FontWeight.w600, color: green);
-TextStyle tOut =
-    GoogleFonts.lexend(fontSize: 15, fontWeight: FontWeight.w600, color: red);
-TextStyle tCat =
-    GoogleFonts.lexend(fontSize: 15, fontWeight: FontWeight.w600, color: text);
-
-// Gaps
-var small = 16.0;
