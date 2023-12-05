@@ -43,10 +43,10 @@ class PIOPTab extends StatelessWidget {
             tabs: [
               Tab(
                   icon: Icon(Icons.add_circle_rounded, color: green),
-                  child: Text('Pera In', style: txt)),
+                  child: Text('Pera In', style: tIn)),
               Tab(
                   icon: Icon(Icons.remove_circle, color: red),
-                  child: Text('Pera Out', style: txt)),
+                  child: Text('Pera Out', style: tOut)),
             ],
             indicatorColor: hlblue,
             indicatorWeight: 5,

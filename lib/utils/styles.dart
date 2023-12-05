@@ -76,8 +76,8 @@ TextStyle tCat = GoogleFonts.lexend(
     fontSize: 14, fontWeight: FontWeight.bold, color: hlblue);
 TextStyle txt = GoogleFonts.lexend(
     fontSize: 14, fontWeight: FontWeight.normal, color: dgray);
-TextStyle drawTxt =
-    GoogleFonts.lexend(fontSize: 14, fontWeight: FontWeight.w700, color: black);
+TextStyle drawTxt = GoogleFonts.lexend(
+    fontSize: 14, fontWeight: FontWeight.w700, color: hlblue);
 
 //16
 TextStyle subHeaders = GoogleFonts.lexend(

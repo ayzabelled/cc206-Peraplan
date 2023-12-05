@@ -6,7 +6,6 @@ import 'package:peraplan/components/piop_drawer.dart';
 import 'package:peraplan/components/piop_tabs.dart';
 import 'package:peraplan/features/Transactions_Screen.dart';
 import 'package:peraplan/utils/styles.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 class NewTransaction extends StatelessWidget {
   const NewTransaction({super.key});
